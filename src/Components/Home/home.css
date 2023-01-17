@@ -38,6 +38,7 @@
     cursor: pointer;
     background-image: url(../../assets/pexels-ben-mack-6775282.jpg);
     color: white;
+    background-color: white;
     
 }
 
@@ -54,4 +55,13 @@ h4.author-area{
  margin-left: 2%;
  color: white;
  
+}
+h4.icon{
+   display: flex;
+   padding-left: 45%;
+   color: rgb(0, 6, 10);
+}
+h4.icon:hover{
+    
+    color: #f5f4f8;
 }
