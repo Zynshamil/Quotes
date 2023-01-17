@@ -10,7 +10,7 @@ function Home() {
 
  
   const [quote, setQuote] = useState("");
-  const [author, setAuthor] = useState("")
+  // const [author, setAuthor] = useState("")
   const [favorites,setFavorites] = useState([])
   // https://api.quotable.io/random
 
@@ -19,8 +19,8 @@ function Home() {
     .then(res =>res.json())
     .then(
        (quote) => {
-        setQuote(quote.content);
-        setAuthor(quote.author);
+        setQuote(quote);
+        // setAuthor(quote.author);
         // console.log(quote)
        })
     
@@ -33,34 +33,34 @@ function Home() {
     .then(res =>res.json())
     .then(
        (quote) => {
-        setQuote(quote.content);
-        setAuthor(quote.author);
+        setQuote(quote);
+        // setAuthor(quote.author);
       
        })
   }
 
-  // Adding Bookmarks
-   const handleAddToFavorites = (q)=>{
-    setFavorites([...favorites,quote,author])
-    console.log(favorites)
-    localStorage.setItem('favorites',JSON.stringify([...favorites,q]))
+  // Adding Bookmarks 
+
+   const handleAddToFavorites = ()=>{
+    // setFavorites([...favorites])
+    favorites.push(quote)
+    let data ={
+      favorites:favorites,
+      // quote:quote,
+      // author:author
+    }
+    console.log(data,)
+    localStorage.setItem('favorites',JSON.stringify(data))
+   
     
    }
-
-   useEffect(() => {
-    const storedfavorites = 
-    JSON.parse(localStorage.getItem('favorites'));
-    if(storedfavorites){
-      setFavorites(storedfavorites)
-    }
-  }, [])
 
   return (
     <div className='home'>
     
       <div className='content'>
-        <h2 className='textarea'>{quote}</h2>
-        <h4 className='author-area'>{author}</h4>
+        <h2 className='textarea'>{quote.content}</h2>
+        <h4 className='author-area'>{quote.author}</h4>
         
       </div>
       <h4 onClick={handleAddToFavorites} className='icon'> <FaVoteYea/> </h4>
@@ -77,7 +77,7 @@ function Home() {
       </Dropdown>
 
       <button onClick={newQuote} className="btn">Next Quote </button>
-      
+      {/* <Bookmarks favoriteQuotes={favorites}/> favourites */}
     </div>
   )
 }

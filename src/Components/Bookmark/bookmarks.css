@@ -1,0 +1,33 @@
+.page{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background: #fbfbfd;
+    gap: 1rem;
+}
+
+.grid{
+    background: rgb(37, 37, 37);
+   
+    color: white;
+    border-radius: 5px;
+    border-color: aliceblue;
+    gap: 1px;
+    padding-right: 10%;
+    padding-left: 3%;
+    width: 60%;
+    margin-left: 7%;
+        
+}
+.p{
+    font-size: small;
+}
+.h1{
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+   
+}
