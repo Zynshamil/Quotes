@@ -1,0 +1,57 @@
+.home{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background: #0a090f;
+    gap: 1rem;
+    background-image: url(../../assets/pexels-james-wheeler-1486974.jpg);
+    
+    
+
+    
+}
+.content{
+    
+    
+    justify-content: center;
+     color: wheat;
+     display: flex;
+     flex-direction: column;
+     border-radius: 15px;
+     background-image: url(../../assets/pexels-tuğba-13791153.jpg);
+     padding-left: 2%;
+     width: 50%;
+     height: 50vh;
+     
+     
+
+}
+
+.btn{
+    gap: 1rem;
+    font-weight: 100;
+    font-size: small;
+    border-color: aliceblue; 
+    cursor: pointer;
+    background-image: url(../../assets/pexels-ben-mack-6775282.jpg);
+    color: white;
+    
+}
+
+
+h2.textarea{
+    padding-left: 4px;
+    font-size: large;
+    font-weight: 200;
+}
+
+h4.author-area{
+ font-weight: 100;
+ font-size: medium;
+ margin-left: 2%;
+ color: white;
+ 
+}
